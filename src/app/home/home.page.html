@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "p-1">
+    <ion-title color = "light">
+      ข้อมูลนักเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class = "padding">
+ <ion-label>
+  <h1 style="text-align: center; margin-top: 5%; margin-bottom: 5%;"><b>กรอกข้อมูลนักเรียน ปวช.2/3</b></h1>
+ </ion-label>
+
+ <ion-item>
+  <ion-label position="floating">รหัสนักเรียน</ion-label>
+  <ion-input type="text" [(ngModel)]="txtid_stu"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ชื่อ-นามสกุล</ion-label>
+  <ion-input type="text" [(ngModel)]="txtname"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ชื่อเล่น</ion-label>
+  <ion-input type="text" [(ngModel)]="txtnname"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">อายุ</ion-label>
+  <ion-input type="text" [(ngModel)]="txtage"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">เบอร์โทร</ion-label>
+  <ion-input type="text" [(ngModel)]="txtphone"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ที่อยู่</ion-label>
+  <ion-input type="text" [(ngModel)]="txtaddress"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-select label="สถานะภาพ : " placeholder="" [(ngModel)]="txtstatus">
+    <ion-select-option value="โสด">โสด</ion-select-option>
+    <ion-select-option value="สมรสแล้ว"> สมรส</ion-select-option>
+    <ion-select-option value="หย่าร้าง">หย่าร้าง</ion-select-option>
+    <ion-select-option value="มีแฟนแล้ว">มีแฟน</ion-select-option>
+  </ion-select>
+</ion-item>
+
+ <div style="text-align: center; margin-top: 5%;">
+  <ion-button fill="outline" (click)="addmembers()">บันทึกข้อมูล</ion-button>
+  <ion-button color="warning" fill="outline" slot="end" (click)="showdata()">ดูข้อมูล</ion-button>
+ </div>
+
+</ion-content>

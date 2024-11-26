@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "p-1">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title color = "light">
+      ข้อมูลนักเรียน ปวช.2/3
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class = "padding">
+ <ion-label>
+  <h1 style="text-align: center; margin-top: 5%; margin-bottom: 5%;"><b>แก้ไขข้อมูลนักเรียน ปวช.2/3</b></h1>
+ </ion-label>
+<ion-input type="hidden" [(ngModel)]="member.id"></ion-input>
+ <ion-item>
+  <ion-label position="floating">รหัสนักเรียน</ion-label>
+  <ion-input type="text" [(ngModel)]="member.id_stu"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ชื่อ-นามสกุล</ion-label>
+  <ion-input type="text" [(ngModel)]="member.name"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ชื่อเล่น</ion-label>
+  <ion-input type="text" [(ngModel)]="member.nname"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">อายุ</ion-label>
+  <ion-input type="text" [(ngModel)]="member.age"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">เบอร์โทร</ion-label>
+  <ion-input type="text" [(ngModel)]="member.phone"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-label position="floating">ที่อยู่</ion-label>
+  <ion-input type="text" [(ngModel)]="member.address"></ion-input>
+ </ion-item>
+
+ <ion-item>
+  <ion-select label="สถานะภาพ : " [(ngModel)]="member.status">
+    <ion-select-option value="โสด">โสด</ion-select-option>
+    <ion-select-option value="สมรสแล้ว"> สมรส</ion-select-option>
+    <ion-select-option value="หย่าร้าง">หย่าร้าง</ion-select-option>
+    <ion-select-option value="มีแฟนแล้ว">มีแฟน</ion-select-option>
+  </ion-select>
+</ion-item>
+
+ <div style="text-align: center; margin-top: 5%;">
+  <ion-button fill="outline" (click)="editmember()">แก้ไขข้อมูล</ion-button>
+
+ </div>
+
+</ion-content>
